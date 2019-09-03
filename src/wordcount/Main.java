@@ -42,10 +42,10 @@ public class Main
             }
         });
 
-        ArrayList<HashMap.Entry<String, Integer>> shortList = new ArrayList<HashMap.Entry<String, Integer>>();
-        shortList.addAll(wordsArrayList.subList(0, 49));
+        ArrayList<HashMap.Entry<String, Integer>> alphaList = new ArrayList<HashMap.Entry<String, Integer>>();
+        alphaList.addAll(wordsArrayList.subList(0, 49));
 
-        Collections.sort(shortList, new Comparator <HashMap.Entry<String, Integer>>()
+        Collections.sort(alphaList, new Comparator <HashMap.Entry<String, Integer>>()
         {
             public int compare(HashMap.Entry<String, Integer> o1, HashMap.Entry<String, Integer> o2)
             {
@@ -54,19 +54,19 @@ public class Main
         });
 
         System.out.println();
-        System.out.println("*** Sort By Count Sort ***");
+        System.out.println("*** Count Sort ***");
 
         for (HashMap.Entry<String, Integer> i : wordsArrayList.subList(0, 49))
         {
-            System.out.println(i.getKey() + " " + i.getValue());
+            System.out.println(i.getKey() + ": " + i.getValue());
         }
 
         System.out.println();
         System.out.println("*** Alphabetical Sort ***");
         
-        for (HashMap.Entry<String, Integer> i : shortList)
+        for (HashMap.Entry<String, Integer> i : alphaList)
         {
-            System.out.println(i.getKey() + " " + i.getValue());
+            System.out.println(i.getKey() + ": " + i.getValue());
         }
     
     }
